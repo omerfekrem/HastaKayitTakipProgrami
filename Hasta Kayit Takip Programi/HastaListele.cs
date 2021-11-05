@@ -21,10 +21,10 @@ namespace Hasta_Kayit_Takip_Programi
 
         private void hastalistele_Load(object sender, EventArgs e)
         {
-            HastaListele();
+            ListeleHasta();
         }
 
-        private void HastaListele()
+        private void ListeleHasta()
         {
             listView1.Items.Clear();
 
@@ -48,8 +48,7 @@ namespace Hasta_Kayit_Takip_Programi
                     oku["Adres"].ToString(),
                     oku["Tel"].ToString(),
                     oku["SosyalGuvenlik"].ToString()
-                    }
-                        );
+                    });
                     listView1.Items.Add(hasta);
                 }
                 oku.Close();
