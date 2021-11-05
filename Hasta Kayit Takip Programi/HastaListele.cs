@@ -89,7 +89,7 @@ namespace Hasta_Kayit_Takip_Programi
                     OleDbCommand komut = new OleDbCommand("Update HastaKayit Set AdSoyad='" + frm.AdSoyad + "',DogumTarihi='" + frm.DogumTarihi + "',DogumYeri='" + frm.DogumYeri + "',Cinsiyet='" + frm.Cinsiyet + "',Adres='" + frm.Adres + "',Tel='" + frm.Telefon + "',SosyalGuvenlik='" + frm.SGuvenlik + "' Where Tc='" + frm.Tc + "'", baglanti);
                     komut.ExecuteNonQuery();
                     MessageBox.Show("Hasta Bilgileri Güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HastaListele();
+                    ListeleHasta();
                 }
                 catch (Exception ex)
                 {
@@ -117,7 +117,7 @@ namespace Hasta_Kayit_Takip_Programi
                 OleDbCommand komut2 = new OleDbCommand("Delete From HastaKayit Where Tc='" + item.SubItems[0].Text + "'", baglanti);
                 komut2.ExecuteNonQuery();
                 MessageBox.Show("Hasta Kaydı Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HastaListele();
+                ListeleHasta();
             }
             catch (Exception ex)
             {
